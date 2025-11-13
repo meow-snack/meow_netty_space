@@ -24,7 +24,6 @@ public class NettyClient {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             System.out.printf("客户端 SocketChannel Hashcode=%s\n", socketChannel.hashCode());
-                            // todo: client handler
                             socketChannel.pipeline().addLast(new NettyClientHandler());
                         }
                     });
